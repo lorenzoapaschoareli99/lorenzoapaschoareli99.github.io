@@ -1,0 +1,126 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: lightgray;
+}
+header ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header ul li{
+    font-size: 50px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    flex: 1;
+    padding: 15px 15px;
+}
+
+header ul li:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* vikings */
+
+.vikings{
+    width: 90%; 
+    transform: translateX(5%);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    flex: 1;
+    padding: 15px 15px;
+}
+
+.vikings:hover{
+    color: red;
+    cursor: pointer;
+}
+
+/* Topo */
+
+.topo{
+    width: 90%;
+    min-height: 400px;
+    transform: translateX(5%);  
+    display: flex;
+}
+
+.imagem{
+    height: 400px;
+    width: 100%;
+    flex: 1;
+    background-image: url("../imagens/imagem1.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-right: 30px;
+    margin-top: 10px;
+    border: 2px solid black;
+}
+.paragrafo
+{
+    flex: 1;
+    font-size: 24px;
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 12px;
+}
+
+.p2{
+    border: 2px solid black;
+    padding: 10px;
+    width: 90%;
+    font-weight: bold;
+    min-height: 350px;
+    transform: translateX(5%);
+    margin-top: 40px;
+    font-size: 20px;
+    background-image: url("../imagens/imagem4.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover; 
+}
+
+.Agradecimentos{
+    text-align: center;
+    font-weight: bold;
+}
+
+.Agradecimentos a{
+    text-decoration: none;
+    color: palevioletred;
+    font-weight: bold;
+}
+
+footer{
+    background-color: black;
+    padding: 5px;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+footer a:hover{
+    color: blue;
+}
