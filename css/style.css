@@ -87,10 +87,7 @@ header ul li:hover{
     transform: translateX(5%);
     margin-top: 40px;
     font-size: 20px;
-    background-image: url("../imagens/imagem4.jpg");
-    background-repeat:no-repeat;
-    background-position:center;
-    background-size:cover; 
+
 }
 
 .Agradecimentos{
@@ -104,6 +101,10 @@ header ul li:hover{
     font-weight: bold;
 }
 
+.java
+{
+    text-align: center;
+}
 footer{
     background-color: black;
     padding: 5px;
