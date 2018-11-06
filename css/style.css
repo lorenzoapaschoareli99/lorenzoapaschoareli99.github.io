@@ -79,6 +79,9 @@ header ul li:hover{
 }
 
 .p2{
+    background-image: url("../imagens/imagem4.jpg");
+    background-size: cover;
+    background-position: center;
     border: 2px solid black;
     padding: 10px;
     width: 90%;
@@ -88,6 +91,26 @@ header ul li:hover{
     margin-top: 40px;
     font-size: 20px;
 
+}
+.java1{
+    text-align: center;
+}
+.java1 h1{
+    width: 90%; 
+    transform: translateX(5%);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+    border: 1px solid black;
+    flex: 1;
+    padding: 15px 15px;
+}
+.java1 h1:hover{
+    color: red;
+    cursor: pointer;
 }
 
 .Agradecimentos{
@@ -101,7 +124,7 @@ header ul li:hover{
     font-weight: bold;
 }
 
-.java
+.java2
 {
     text-align: center;
 }

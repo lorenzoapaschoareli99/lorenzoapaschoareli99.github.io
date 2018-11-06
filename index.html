@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Vikings</title>
 </head>
 <body>
     <header>
@@ -18,10 +18,11 @@
     <section class="paragrafo">
         <p>
             Busco à partir deste trabalho, além de demonstrar o que foi a sociedade viking (demonstrado abaixo), explicar coisas de seu cotidiano como as fortes ligações de amizade o companheirismo e a sua aptidão e gosto pela batalha, para tal fim utilizarei a metodologia de dois importantes sociólogos que são Emile Durkhein e Marx Weber nos quais utilizarei os seguintes estudos respectivamente: fato social, coercitividade, consciência coletiva de Durkhein e dos tipos de dominação e das ações sociais de Weber.
-                Isto devido ao fator potencial que esta envolvido na sociedade e porque estes foram pensadores os quais deram percisas e corretas for,as de se analisar uma sociedade e ou individuo.
+                Isto devido ao fator potencial que esta envolvido na sociedade e porque estes foram pensadores os quais deram percisas e corretas formas de se analisar uma sociedade e ou individuo.
         </p>
     </section>
     </div>
+
     <section>
         <div class="vikings">
                 <p>A CIVILIZAÇÃO VIKING </p>
@@ -45,6 +46,101 @@
         </p>
         </div>
         <section>
+            <div class="java1">
+                   
+                            
+                            <body>
+                                <h1>Jogo adivinhe sua idade viking</h1>
+                          
+                                <p>Nós selecionamos um número aleatório entre 1 e 100. Veja se consegue adivinhar em 10 chances ou menos. Nós lhe diremos se seu palpite foi muito alto ou muito baixo.</p>
+                               
+                          <div class="form">
+                            <label for="campoPalpite">Digite seu palpite: </label><input type="text" id="campoPalpite" class="campoPalpite">
+                            <input type="submit" value="Enviar palpite" class="envioPalpite">
+                          </div>
+                          
+                          <div class="resultadoParas">
+                            <p class="palpites"></p>
+                            <p class="ultimoResultado"></p>
+                            <p class="baixoOuAlto"></p>
+                          </div>
+                          </body>
+                          
+                          <script>
+                            // JavaScript vai aqui
+                            var numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+                            var palpites = document.querySelector('.palpites');
+                            var ultimoResultado = document.querySelector('.ultimoResultado');
+                            var baixoOuAlto = document.querySelector('.baixoOuAlto');
+                            var envioPalpite = document.querySelector('.envioPalpite');
+                            var campoPalpite = document.querySelector('.campoPalpite');
+                            var contagemPalpites = 1;
+                            var botaoReinicio;
+                            campoPalpite.focus();
+                            function conferirPalpite()
+                             {
+                              var palpiteUsuario = Number(campoPalpite.value);
+                              if(contagemPalpites === 1) 
+                              {
+                                palpites.textContent = 'Palpites anteriores: ';
+                              }
+                              palpites.textContent += palpiteUsuario + ' ';
+                              if(palpiteUsuario === numeroAleatorio)
+                               {
+                                ultimoResultado.textContent = 'Parabéns! Você acertou!';
+                                ultimoResultado.style.backgroundColor = 'green';
+                                baixoOuAlto.textContent = '';
+                                configFimDeJogo();
+                              } else if(contagemPalpites === 10) 
+                              {
+                                ultimoResultado.textContent = '!!!FIM DE JOGO!!!';
+                                baixoOuAlto.textContent = '';
+                                configFimDeJogo();
+                              } else
+                               {
+                                ultimoResultado.textContent = 'Errado!';
+                                ultimoResultado.style.backgroundColor = 'red';
+                                if(palpiteUsuario < numeroAleatorio) 
+                                {
+                                  baixoOuAlto.textContent = 'Seu palpite foi muito baixo!';
+                                } else if(palpiteUsuario > numeroAleatorio) 
+                                {
+                                  baixoOuAlto.textContent = 'Seu palpite foi muito alto!';
+                                }
+                              }
+                              contagemPalpites++;
+                              campoPalpite.value = '';
+                              campoPalpite.focus();
+                            }
+                            envioPalpite.addEventListener('click', conferirPalpite);
+                            function configFimDeJogo() {
+                              campoPalpite.disabled = true;
+                              envioPalpite.disabled = true;
+                              botaoReinicio = document.createElement('button');
+                              botaoReinicio.textContent = 'Iniciar novo jogo';
+                              document.body.appendChild(botaoReinicio);
+                              botaoReinicio.addEventListener('click', reiniciarJogo);
+                            }
+                            function reiniciarJogo() {
+                              contagemPalpites = 1;
+                              var reiniciarParas = document.querySelectorAll('.resultadoParas p');
+                              for(var i = 0 ; i < reiniciarParas.length ; i++) {
+                                reiniciarParas[i].textContent = '';
+                              }
+                              botaoReinicio.parentNode.removeChild(botaoReinicio);
+                              campoPalpite.disabled = false;
+                              envioPalpite.disabled = false;
+                              campoPalpite.value = '';
+                              campoPalpite.focus();
+                              ultimoResultado.style.backgroundColor = 'white';
+                              numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+                            }
+                          </script>
+                          
+            </div>
+        </section>
+
+        <section>
             <div class="Agradecimentos">
                 <p>
                     Agradecimentos especiais ao Vitor Carvalho (Vitor&copy; <a href="https://github.com/HeiwaRyuu" target="_blank">GitHub Vitor</a>) que me ensinou a fazer este site.
@@ -53,7 +149,7 @@
         </section>
     </section>
    <section>
-       <div class="java">
+       <div class="java2">
         <p>
                 <button type="button"onclick="document.getElementById('demo').innerHTML = Date()">
                         Clique para ver data e hora.</button>
@@ -67,5 +163,3 @@
     </footer>
     </body>
 </html>
-    
-  
